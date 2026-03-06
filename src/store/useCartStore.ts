@@ -5,6 +5,7 @@ export interface CartItem {
     productId: string;
     name: string;
     price: number;
+    emoji?: string | null;
     categoryId: string;
     quantity: number;
     imageUrl?: string;
@@ -25,7 +26,7 @@ interface CartState {
     promos: PromoRule[]; // Almacenaje de las promociones activas bajadas en carga inicial
     // Acciones
     toggleCart: () => void;
-    addItem: (product: { id: string, name: string, price: number, categoryId: string, imageUrl?: string }) => void;
+    addItem: (product: { id: string, name: string, price: number, emoji?: string | null, categoryId: string, imageUrl?: string }) => void;
     removeItem: (itemId: string) => void;
     updateQuantity: (itemId: string, quantity: number) => void;
     setPromos: (promos: PromoRule[]) => void;

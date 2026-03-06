@@ -10,6 +10,7 @@ interface CartItemRowProps {
         productId: string;
         name: string;
         price: number;
+        emoji?: string | null;
         categoryId: string;
         quantity: number;
         imageUrl?: string;
@@ -36,7 +37,9 @@ export default function CartItemRow({ item }: CartItemRowProps) {
 
             <div className="flex-grow flex flex-col justify-between">
                 <div className="flex justify-between items-start">
-                    <h4 className="font-sans font-medium text-foreground text-sm line-clamp-2 pr-4">{item.name}</h4>
+                    <h4 className="font-sans font-medium text-foreground text-sm line-clamp-2 pr-4">
+                        {item.emoji && <span className="mr-1">{item.emoji}</span>}{item.name}
+                    </h4>
                     <p className="font-bold text-foreground text-sm whitespace-nowrap">${(item.price * item.quantity).toLocaleString("es-AR")}</p>
                 </div>
 

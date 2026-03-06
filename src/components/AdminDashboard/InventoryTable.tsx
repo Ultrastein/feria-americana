@@ -13,6 +13,7 @@ interface Product {
     id: string;
     name: string;
     price: number;
+    emoji?: string | null;
     categoryId: string;
     category: Category;
     isAvailable: boolean;
@@ -129,7 +130,10 @@ export default function InventoryTable({
                     <tbody className="divide-y divide-border-color">
                         {products.map((product) => (
                             <tr key={product.id} className="hover:bg-gray-50/50 transition-colors">
-                                <td className="px-6 py-4 font-medium text-foreground">{product.name}</td>
+                                <td className="px-6 py-4 font-medium text-foreground">
+                                    {product.emoji && <span className="mr-2">{product.emoji}</span>}
+                                    {product.name}
+                                </td>
                                 <td className="px-6 py-4">
                                     <span className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">
                                         {product.category.name}

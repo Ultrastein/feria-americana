@@ -22,22 +22,22 @@ async function main() {
   // 2. Productos
   const products = [
     // Adultos
-    { categoryId: catRopaAdultos.id, name: 'Blazzer', price: 5000.00 },
-    { categoryId: catRopaAdultos.id, name: 'Campera Gruesa', price: 8500.00 },
-    { categoryId: catRopaAdultos.id, name: 'Jean', price: 4000.00 },
-    { categoryId: catRopaAdultos.id, name: 'Remera Manga Corta', price: 3500.00 },
-    { categoryId: catRopaAdultos.id, name: 'Camisa', price: 2500.00 },
-    { categoryId: catRopaAdultos.id, name: 'Sweater', price: 3500.00 },
+    { categoryId: catRopaAdultos.id, name: 'Blazzer', emoji: '🧥', price: 5000.00 },
+    { categoryId: catRopaAdultos.id, name: 'Campera Gruesa', emoji: '🧥', price: 8500.00 },
+    { categoryId: catRopaAdultos.id, name: 'Jean', emoji: '👖', price: 4000.00 },
+    { categoryId: catRopaAdultos.id, name: 'Remera Manga Corta', emoji: '👕', price: 3500.00 },
+    { categoryId: catRopaAdultos.id, name: 'Camisa', emoji: '👔', price: 2500.00 },
+    { categoryId: catRopaAdultos.id, name: 'Sweater', emoji: '🧶', price: 3500.00 },
     // Niños
-    { categoryId: catRopaNinos.id, name: 'Buzo', price: 4500.00 },
-    { categoryId: catRopaNinos.id, name: 'Jogging', price: 3500.00 },
-    { categoryId: catRopaNinos.id, name: 'Remera Manga Corta', price: 2500.00 },
+    { categoryId: catRopaNinos.id, name: 'Buzo', emoji: '🧥', price: 4500.00 },
+    { categoryId: catRopaNinos.id, name: 'Jogging', emoji: '👖', price: 3500.00 },
+    { categoryId: catRopaNinos.id, name: 'Remera Manga Corta', emoji: '👕', price: 2500.00 },
     // Bebés
-    { categoryId: catRopaBebes.id, name: 'Enterito Corto', price: 3500.00 },
-    { categoryId: catRopaBebes.id, name: 'Remeritas', price: 1500.00 },
+    { categoryId: catRopaBebes.id, name: 'Enterito Corto', emoji: '🩱', price: 3500.00 },
+    { categoryId: catRopaBebes.id, name: 'Remeritas', emoji: '👕', price: 1500.00 },
     // Blanca
-    { categoryId: catRopaBlanca.id, name: 'Juego 1 Plaza', price: 5000.00 },
-    { categoryId: catRopaBlanca.id, name: 'Mantel Grande', price: 4500.00 },
+    { categoryId: catRopaBlanca.id, name: 'Juego 1 Plaza', emoji: '🛏️', price: 5000.00 },
+    { categoryId: catRopaBlanca.id, name: 'Mantel Grande', emoji: '🍽️', price: 4500.00 },
   ];
 
   for (const product of products) {

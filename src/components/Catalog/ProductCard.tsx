@@ -9,6 +9,7 @@ interface ProductCardProps {
         id: string;
         name: string;
         price: number;
+        emoji?: string | null;
         categoryId: string;
         category: { name: string };
     };
@@ -24,6 +25,7 @@ export default function ProductCard({ product }: ProductCardProps) {
             id: product.id,
             name: product.name,
             price: product.price,
+            emoji: product.emoji,
             categoryId: product.categoryId,
             imageUrl: placeholderImage,
         });
@@ -56,6 +58,7 @@ export default function ProductCard({ product }: ProductCardProps) {
                         {product.category.name}
                     </p>
                     <h3 className="font-serif text-lg font-medium text-foreground leading-snug line-clamp-2">
+                        {product.emoji && <span className="mr-2">{product.emoji}</span>}
                         {product.name}
                     </h3>
                 </div>
