@@ -4,11 +4,21 @@ import { PrismaClient } from "@prisma/client";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
+import PasswordProtect from "@/components/AdminDashboard/PasswordProtect";
+
 export const dynamic = "force-dynamic";
 
 const prisma = new PrismaClient();
 
-export default async function AdminDashboardPage() {
+export default function AdminDashboardPage() {
+    return (
+        <PasswordProtect>
+            <AdminDashboardContent />
+        </PasswordProtect>
+    );
+}
+
+async function AdminDashboardContent() {
     const products = await prisma.product.findMany({
         include: { category: true },
         orderBy: [
