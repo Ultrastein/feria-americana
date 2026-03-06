@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+:root {
+  --background: #F9F6F0; /* Blanco Hueso / Crema */
+  --foreground: #222E3C; /* Azul Noche */
+  --primary-action: #E07A5F; /* Terracota Mate */
+  --secondary-action: #2A9D8F; /* Verde Esmeralda */
+  --card-bg: #FFFFFF;
+  --border-color: #EBEBEB;
+  --muted-text: #6B7280;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary-action);
+  --color-secondary: var(--secondary-action);
+  --font-sans: var(--font-inter), sans-serif;
+  --font-serif: var(--font-playfair), serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  margin: 0;
+  padding: 0;
+}
+
+/* Custom Utilities for Masonry and Global Aesthetics */
+h1, h2, h3, h4, .font-serif {
+  font-family: var(--font-serif);
+}
+
+.premium-shadow {
+  box-shadow: 0 8px 30px rgba(34, 46, 60, 0.06);
+  transition: box-shadow 0.3s ease;
+}
+
+.premium-shadow:hover {
+  box-shadow: 0 12px 40px rgba(34, 46, 60, 0.12);
+}
+
+.interactive-hover {
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.interactive-hover:hover {
+  transform: translateY(-4px);
+}
+
